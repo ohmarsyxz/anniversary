@@ -17,24 +17,25 @@ const AnniversaryPage = () => {
 
   const calculateTimeDifference = () => {
     const targetDate = new Date("2024-09-29T00:00:00.000Z");
+  
     const currentDate = new Date();
-
+    currentDate.setUTCHours(currentDate.getUTCHours() + 7);
+  
     const diffInMs = currentDate - targetDate;
-
+  
     if (diffInMs <= 0) {
       setTimeDifference({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       return;
     }
-
+  
     const days = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (diffInMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) + 7
-    );
+    const hours = Math.floor((diffInMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diffInMs % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diffInMs % (1000 * 60)) / 1000);
-
+  
     setTimeDifference({ days, hours, minutes, seconds });
   };
+  
 
   const calculateDaysDifference = (inputDate) => {
     if (!inputDate) return null;
