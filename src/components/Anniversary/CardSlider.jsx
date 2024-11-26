@@ -7,9 +7,9 @@ import {
 
 const CardSlider = () => {
   const cards = [
-    { id: 1, video: "public/videos/dreamworld.mp4", title: "Dreamworld" },
-    { id: 2, video: "public/videos/dreamworld.mp4", title: "Adventure" },
-    { id: 3, video: "public/videos/dreamworld.mp4", title: "Nature" },
+    { id: 1, video: "/videos/dreamworld.mp4", title: "Dreamworld" },
+    { id: 2, video: "/videos/dreamworld.mp4", title: "Adventure" },
+    { id: 3, video: "/videos/dreamworld.mp4", title: "Nature" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -43,6 +43,7 @@ const CardSlider = () => {
               autoPlay
               muted
               loop
+              preload="auto"
               className="rounded-lg"
             >
               <source src={card.video} type="video/mp4" />
@@ -52,16 +53,18 @@ const CardSlider = () => {
           </div>
         ))}
 
+        {/* Left Arrow */}
         <div
           onClick={handlePrev}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer hover:text-blue-500 transition duration-200"
         >
           <FontAwesomeIcon icon={faChevronLeft} size="2x" />
         </div>
 
+        {/* Right Arrow */}
         <div
           onClick={handleNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer hover:text-blue-500 transition duration-200"
         >
           <FontAwesomeIcon icon={faChevronRight} size="2x" />
         </div>
