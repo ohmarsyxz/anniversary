@@ -14,7 +14,7 @@ const HomePage = () => {
 
     if (enteredDate) {
       if (enteredDate === "2024-09-29") {
-        navigate(`/anniversary?date=${enteredDate}`);
+        navigate(`/anniversary/page?date=${enteredDate}`);
         console.log("Saved Date:", enteredDate);
       } else {
         Swal.fire({
