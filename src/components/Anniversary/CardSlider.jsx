@@ -7,9 +7,9 @@ import {
 
 const CardSlider = () => {
   const cards = [
-    { id: 1, video: "/videos/dreamworld.mp4", title: "Dreamworld" },
-    { id: 2, video: "/videos/dreamworld.mp4", title: "Adventure" },
-    { id: 3, video: "/videos/dreamworld.mp4", title: "Nature" },
+    { id: 1, video: "/anniversary/videos/dreamworld.mp4", title: "Dreamworld" },
+    { id: 2, video: "/anniversary/videos/dreamworld.mp4", title: "Adventure" },
+    { id: 3, video: "/anniversary/videos/dreamworld.mp4", title: "Nature" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
