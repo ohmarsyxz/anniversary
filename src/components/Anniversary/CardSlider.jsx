@@ -8,8 +8,16 @@ import {
 const CardSlider = () => {
   const cards = [
     { id: 1, video: "/anniversary/videos/dreamworld.mp4", title: "Dreamworld" },
-    { id: 2, video: "/anniversary/videos/dreamworld.mp4", title: "Adventure" },
-    { id: 3, video: "/anniversary/videos/dreamworld.mp4", title: "Nature" },
+    {
+      id: 2,
+      video: "/anniversary/videos/1annClip.mp4",
+      title: "1 Anniversary",
+    },
+    {
+      id: 3,
+      image: "/anniversary/images/1ann.png",
+      title: "1 Anniversary card",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,7 +34,7 @@ const CardSlider = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-[100vh] py-8 overflow-x-hidden">
-      <div className="relative w-[550px] h-[300px]">
+      <div className="relative w-[600px] max-[800px]:w-[450px] max-[600px]:w-[350px] h-[350px] overflow-hidden">
         {cards.map((card, index) => (
           <div
             key={card.id}
@@ -37,18 +45,24 @@ const CardSlider = () => {
               transform: `translateX(${(index - currentIndex) * 100}%)`,
             }}
           >
-            <video
-              width="550"
-              height="300"
-              autoPlay
-              muted
-              loop
-              preload="auto"
-              className="rounded-lg"
-            >
-              <source src={card.video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            {card.video ? (
+              <video
+                autoPlay
+                muted
+                loop
+                preload="auto"
+                className="w-full h-full object-contain rounded-lg"
+              >
+                <source src={card.video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <img
+                src={card.image}
+                alt={card.title}
+                className="rounded-lg w-full h-full object-contain"
+              />
+            )}
             <p className="text-center mt-2 text-lg font-bold">{card.title}</p>
           </div>
         ))}

@@ -77,11 +77,11 @@ const AnniversaryPage = () => {
         <div></div>
         <div className="flex flex-col items-center gap-4">
           <div className="flex flex-col gap-2">
-            <p className="text-4xl font-semibold">
-              Anniversary <span className="text-6xl">{monthDifference}</span>{" "}
+            <p className="text-4xl font-semibold max-[600px]:text-3xl max-[450px]:text-lg">
+              Anniversary <span className="text-6xl max-[600px]:text-5xl max-[450px]:text-2xl">{monthDifference}</span>{" "}
               months
             </p>
-            <p className="text-xl">
+            <p className="text-xl max-[450px]:text-sm">
               {timeDifference.days} days, {timeDifference.hours} hours,{" "}
               {timeDifference.minutes} minutes, {timeDifference.seconds} seconds
             </p>
