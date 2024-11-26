@@ -78,7 +78,7 @@
 }
 
 .mail {
-  background-image: url("src/assets/bg-beautiful.png");
+  background-image: url("/images/bg-beautiful.png");
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center; 
