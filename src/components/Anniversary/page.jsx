@@ -12,7 +12,7 @@ const AnniversaryPage = () => {
     <div className="flex flex-col w-full h-full justify-center items-center gap-4">
       <p>Hello {date}</p>
       <Link
-        to="/"
+        to="/home"
         className="flex justify-center items-center gap-2 w-[100px] py-1 bg-white"
       >
         <FontAwesomeIcon icon={faArrowLeft} />

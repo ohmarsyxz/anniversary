@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="bg-[#f3f3f3] h-[100vh]">
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/anniversary" element={<AnniversaryPage />} />
       </Routes>
     </div>
