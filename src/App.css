@@ -1,3 +1,85 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@b: #FFE0B5;
+@c: #CA2E55;
+
+@bg1: #301916;
+@bg2: #462521;
+@bg3: #8A6552;
+
+@keyframes sway {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: ease-in-out;
+  }
+  10% {
+    transform: rotate(-12deg);
+    animation-timing-function: ease-in-out;
+  }
+  30% {
+    transform: rotate(8deg);
+    animation-timing-function: ease-in-out;
+  }
+  45% {
+    transform: rotate(-4deg);
+    animation-timing-function: ease-in-out;
+  }
+  60% {
+    transform: rotate(2deg);
+    animation-timing-function: ease-in-out;
+  }
+  70% {
+    transform: rotate(-0.1deg);
+    animation-timing-function: ease-in-out;
+  }
+  75% {
+    transform: rotate(0.05deg);
+    animation-timing-function: ease-in-out;
+  }
+  80% {
+    transform: rotate(0);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.bounce {
+  animation: bounce 2s ease infinite;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.sway {
+  animation: sway 5s linear infinite;
+  transform-origin: 50% -32px;
+}
+
+.sketchy {
+  border: 3px solid #333333;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  letter-spacing: 0.3ch;
+}
+
+.mail {
+  background-image: url("src/assets/bg-beautiful.png");
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center; 
+}

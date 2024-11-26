@@ -14,8 +14,7 @@ const HomePage = () => {
 
     if (enteredDate) {
       if (enteredDate === "2024-09-29") {
-        navigate(`/anniversary/page?date=${enteredDate}`);
-        console.log("Saved Date:", enteredDate);
+        navigate(`/anniversary/page`);
       } else {
         Swal.fire({
           icon: "warning",
@@ -33,26 +32,25 @@ const HomePage = () => {
   };
 
   return (
-    <div className="flex flex-col h-[100vh] w-full items-center">
-      <div>
+    <div className="flex flex-col h-[100vh] w-full items-center justify-center bg-[#ffcdcd]">
+      {/* <div>
         <h1 className="font-bold text-5xl p-4 bg-[#e89090] w-[100vw] text-white">
           Welcome to anniversary website
         </h1>
-      </div>
+      </div> */}
 
-      <div className="flex flex-col gap-6 h-full justify-center items-center">
-
+      <div className="flex flex-col gap-6 h-[50%] max-[800px]:h-[30%] w-[60%] justify-center items-center border border-black bg-white sway sketchy">
         <ReactTypingEffect
           text="Enter ours anniversary date"
           speed={50}
           eraseSpeed={20}
-          className="font-medium text-4xl"
+          className="font-medium text-4xl max-[840px]:text-xl max-[480px]:text-lg text-wrap w-full max-[800px]:w-[200px] max-[800px]:h-[90px] text-center"
         />
-        <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
             type="date"
             name="anniversaryDate"
-            className="px-2 border rounded-md w-[250px]"
+            className="px-2 border rounded-md w-[250px] max-[840px]:w-[200px] max-[480px]:w-[150px]"
           />
           <button
             type="submit"
