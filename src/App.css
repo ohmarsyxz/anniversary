@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@b: #FFE0B5;
-@c: #CA2E55;
-
-@bg1: #301916;
-@bg2: #462521;
-@bg3: #8A6552;
-
 @keyframes sway {
   0% {
     transform: rotate(0);
@@ -77,19 +70,54 @@
   letter-spacing: 0.3ch;
 }
 
-.mail {
+.clips {
   background-image: url("/images/bg-beautiful.png");
-  background-size: cover; 
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
 }
 
 .heart {
   --c: red;
   aspect-ratio: 1;
-  background:
-   radial-gradient(at 70% 31%,var(--c) 29%,#0000 30%),
-   radial-gradient(at 30% 31%,var(--c) 29%,#0000 30%),
-   linear-gradient(var(--c) 0 0) bottom/100% 50% no-repeat;
-  clip-path: polygon(-43% 0,50% 91%, 143% 0);
+  background: radial-gradient(at 70% 31%, var(--c) 29%, #0000 30%),
+    radial-gradient(at 30% 31%, var(--c) 29%, #0000 30%),
+    linear-gradient(var(--c) 0 0) bottom/100% 50% no-repeat;
+  clip-path: polygon(-43% 0, 50% 91%, 143% 0);
+}
+
+.postcard {
+  background-image: url("/images/postcard.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.scale-up {
+  animation: scale-up linear;
+  animation-timeline: scroll();
+}
+.fade-in {
+  animation: fade-in linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scale-up {
+  from {
+    scale: 0.6;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    scale: 0.6;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
 }

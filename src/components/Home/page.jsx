@@ -33,12 +33,6 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col h-[100vh] w-full items-center justify-center bg-[#ffcdcd]">
-      {/* <div>
-        <h1 className="font-bold text-5xl p-4 bg-[#e89090] w-[100vw] text-white">
-          Welcome to anniversary website
-        </h1>
-      </div> */}
-
       <div className="flex flex-col gap-6 h-[50%] max-[800px]:h-[30%] w-[60%] justify-center items-center border border-black bg-white sway sketchy">
         <ReactTypingEffect
           text="Enter ours anniversary date"

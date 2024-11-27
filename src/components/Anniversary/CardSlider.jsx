@@ -33,7 +33,7 @@ const CardSlider = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-[100vh] py-8 overflow-x-hidden">
+    <div className="flex flex-col justify-center items-center h-[100vh] py-8 overflow-x-hidden fade-in">
       <div className="relative w-[600px] max-[800px]:w-[450px] max-[600px]:w-[350px] h-[350px] overflow-hidden">
         {cards.map((card, index) => (
           <div

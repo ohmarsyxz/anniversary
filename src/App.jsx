@@ -5,7 +5,7 @@ import AnniversaryPage from "./components/Anniversary/page";
 
 function App() {
   return (
-    <div className="bg-[#f9f9f9] h-full">
+    <div className="h-full">
       <Routes>
         <Route path="/anniversary/" element={<HomePage />} />
         <Route path="/anniversary/page" element={<AnniversaryPage />} />
