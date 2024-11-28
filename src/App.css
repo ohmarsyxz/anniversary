@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --opacity: 0.5;
+  --angle: 0deg;
+}
+
 @keyframes sway {
   0% {
     transform: rotate(0);
@@ -91,6 +96,26 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media screen and (max-width: 768px) {
+  .postcard {
+    background-image: linear-gradient(
+      to right top,
+      rgba(209, 107, 165, 0.5),
+      rgba(199, 119, 185, 0.5),
+      rgba(186, 131, 202, 0.5),
+      rgba(170, 143, 216, 0.5),
+      rgba(154, 154, 225, 0.5),
+      rgba(138, 167, 236, 0.5),
+      rgba(121, 179, 244, 0.5),
+      rgba(105, 191, 248, 0.5),
+      rgba(82, 207, 254, 0.5),
+      rgba(65, 223, 255, 0.5),
+      rgba(70, 238, 250, 0.5),
+      rgba(95, 251, 241, 0.5)
+    );
+  }
 }
 
 .scale-up {
