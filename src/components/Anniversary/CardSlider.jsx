@@ -18,6 +18,16 @@ const CardSlider = () => {
       image: "/anniversary/images/1ann.png",
       title: "1 Anniversary card",
     },
+    {
+      id: 4,
+      video: "/anniversary/videos/2annClip.mp4",
+      title: "2 Anniversary",
+    },
+    {
+      id: 5,
+      video: "/anniversary/videos/2ann_long.mp4",
+      title: "2 Anniversary Cutie",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,6 +55,9 @@ const CardSlider = () => {
               transform: `translateX(${(index - currentIndex) * 100}%)`,
             }}
           >
+            <p className="text-center mt-2 text-lg font-bold text-black">
+              {card.title}
+            </p>
             {card.video ? (
               <video
                 autoPlay
@@ -63,7 +76,6 @@ const CardSlider = () => {
                 className="rounded-lg w-full h-full object-contain"
               />
             )}
-            <p className="text-center mt-2 text-lg font-bold">{card.title}</p>
           </div>
         ))}
 
