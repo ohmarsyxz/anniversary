@@ -38,7 +38,7 @@ const HomePage = () => {
           text="Enter ours anniversary date"
           speed={50}
           eraseSpeed={20}
-          className="font-medium text-4xl max-[840px]:text-xl max-[480px]:text-sm text-wrap w-full max-[800px]:w-[200px] max-[800px]:h-[90px] text-center"
+          className="font-medium text-4xl max-[800px]:text-sm max-[480px]:text-sm text-wrap w-full max-[800px]:w-[200px] max-[800px]:h-[90px] text-center"
         />
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input

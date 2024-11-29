@@ -7,24 +7,25 @@ import {
 
 const CardSlider = () => {
   const cards = [
-    { id: 1, video: "/anniversary/videos/dreamworld.mp4", title: "Dreamworld" },
+    { id: 1, video: "/anniversary/videos/pattaya.mp4", title: "Pattaya" },
+    { id: 2, video: "/anniversary/videos/dreamworld.mp4", title: "Dreamworld" },
     {
-      id: 2,
+      id: 3,
       video: "/anniversary/videos/1annClip.mp4",
       title: "1 Anniversary",
     },
     {
-      id: 3,
+      id: 4,
       image: "/anniversary/images/1ann.png",
       title: "1 Anniversary card",
     },
     {
-      id: 4,
+      id: 5,
       video: "/anniversary/videos/2annClip.mp4",
       title: "2 Anniversary",
     },
     {
-      id: 5,
+      id: 6,
       video: "/anniversary/videos/2ann_long.mp4",
       title: "2 Anniversary Cutie",
     },
