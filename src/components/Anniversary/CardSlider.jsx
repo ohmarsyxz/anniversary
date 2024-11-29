@@ -21,14 +21,20 @@ const CardSlider = () => {
     },
     {
       id: 5,
+      image: "/anniversary/images/2ann_card.png",
+      title: "2 Anniversary card",
+    },
+    {
+      id: 6,
       video: "/anniversary/videos/2annClip.mp4",
       title: "2 Anniversary",
     },
     {
-      id: 6,
+      id: 7,
       video: "/anniversary/videos/2ann_long.mp4",
       title: "2 Anniversary Cutie",
     },
+
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
