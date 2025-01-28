@@ -44,6 +44,11 @@ const CardSlider = () => {
       video: "/anniversary/videos/3ann-kwan.mp4",
       title: "3 Anniversary By Kwan",
     },
+    {
+      id: 10,
+      video: "/anniversary/videos/4annClip.mp4",
+      title: "4 Anniversary By Ohm",
+    },
 
   ];
 
