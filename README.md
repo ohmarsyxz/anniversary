@@ -13,3 +13,5 @@ Currently, two official plugins are available:
 npm run build
 npm run deploy
 ```
+
+pls git push after that
