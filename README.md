@@ -14,4 +14,4 @@ npm run build
 npm run deploy
 ```
 
-pls git push after that
+** pls git push after that **
