@@ -40,19 +40,18 @@ const AnniversaryPage = () => {
     setTimeDifference({ days, hours, minutes, seconds });
   };
 
-  const calculateDaysDifference = (inputDate) => {
+  const calculateMonthsDifference = (inputDate) => {
     if (!inputDate) return null;
-  
+
     const input = new Date(inputDate);
     const target = new Date("2024-09-29T00:00:00.000Z");
-  
-    const yearDifference = target.getFullYear() - input.getFullYear();
-  
-    const monthDifference = target.getMonth() - input.getMonth();
-  
-    let totalMonths = yearDifference * 12 + monthDifference;
-  
+
+    let totalMonths =
+      (target.getFullYear() - input.getFullYear()) * 12 +
+      (target.getMonth() - input.getMonth());
+
     const dayDifference = target.getDate() - input.getDate();
+
     if (dayDifference < 0) {
       totalMonths -= 1;
     }
@@ -62,12 +61,13 @@ const AnniversaryPage = () => {
       input.getMonth() + 1,
       0
     ).getDate();
-    const decimalMonths = totalMonths + dayDifference / daysInInputMonth;
-  
-    return -decimalMonths.toFixed(2);
+
+    const decimalMonths = -(totalMonths + dayDifference / daysInInputMonth) - 1;
+
+    return decimalMonths.toFixed(2);
   };
 
-  const monthDifference = calculateDaysDifference(new Date());
+  const monthDifference = calculateMonthsDifference(new Date().toISOString());
 
   useEffect(() => {
     calculateTimeDifference();
