@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactTypingEffect from "react-typing-effect";
-
 import {
   faAngleDoubleDown,
   faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import CardSlider from "./CardSlider";
+import RollingGallery from "../common/RollingGallery";
+import Stack from "../common/Stack";
 
 const AnniversaryPage = () => {
   const [timeDifference, setTimeDifference] = useState({
@@ -121,7 +122,15 @@ const AnniversaryPage = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center h-[100vh] py-8 clips">
-        <CardSlider />
+        {/* <p className="pb-6">&lt; &lt; Drag &gt; &gt;</p> */}
+        {/* <CardSlider /> */}
+        {/* <RollingGallery pauseOnHover={true}/> */}
+        <Stack
+          randomRotation={true}
+          sensitivity={180}
+          sendToBackOnClick={false}
+          cardDimensions={{ width: 500, height: 500 }}
+        />
       </div>
     </div>
   );
