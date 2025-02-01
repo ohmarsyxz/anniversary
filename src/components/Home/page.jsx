@@ -32,27 +32,27 @@ const HomePage = () => {
   };
 
   return (
-    <div className="flex flex-col h-[100vh] w-full items-center justify-center bg-[#ffcdcd]">
+    <div className="flex flex-col h-[100vh] w-full items-center justify-center bg-[#ffcdcd] fade-in">
       <div className="flex flex-col gap-6 h-[50%] max-[800px]:h-[30%] w-[60%] justify-center items-center border border-black bg-white sway sketchy">
-        <ReactTypingEffect
-          text="Enter ours anniversary date"
-          speed={50}
-          eraseSpeed={20}
-          className="font-medium text-4xl max-[800px]:text-sm max-[480px]:text-sm text-wrap w-full max-[800px]:w-[200px] max-[800px]:h-[90px] text-center"
-        />
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <input
-            type="date"
-            name="anniversaryDate"
-            className="px-2 border rounded-md w-[250px] max-[840px]:w-[200px] max-[480px]:w-[150px]"
+          <ReactTypingEffect
+            text="Enter ours anniversary date"
+            speed={50}
+            eraseSpeed={20}
+            className="font-medium text-4xl max-[800px]:text-sm max-[480px]:text-sm text-wrap w-full max-[800px]:w-[200px] max-[800px]:h-[90px] text-center"
           />
-          <button
-            type="submit"
-            className="bg-[#e89090] rounded-md py-1 text-white font-semibold"
-          >
-            Submit
-          </button>
-        </form>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <input
+              type="date"
+              name="anniversaryDate"
+              className="px-2 border rounded-md w-[250px] max-[840px]:w-[200px] max-[480px]:w-[150px]"
+            />
+            <button
+              type="submit"
+              className="bg-[#e89090] rounded-md py-1 text-white font-semibold"
+            >
+              Submit
+            </button>
+          </form>
       </div>
     </div>
   );

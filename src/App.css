@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --opacity: 0.5;
   --angle: 0deg;
+}
+
+.pacifico-font {
+  font-family: "Pacifico", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 @keyframes sway {
@@ -120,9 +129,9 @@
 
 .scale-up {
   animation: scale-up linear;
-  animation-timeline: scroll();
+  animation-timeline: view();
 }
-.fade-in {
+.fade-in-scroll {
   animation: fade-in linear;
   animation-timeline: scroll();
 }
@@ -136,13 +145,15 @@
   }
 }
 
+.fade-in {
+  animation: fade-in 1.2s ease-out forwards;
+}
+
 @keyframes fade-in {
   from {
-    scale: 0.6;
     opacity: 0;
   }
   to {
-    scale: 1;
     opacity: 1;
   }
 }
